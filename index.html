@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SMT X FE</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="full-container">
+      <div class="title-bar">
+        <img class="icon-1" src="img/jackFrostIconBlueWhite.png" alt="" />
+        <h1>
+          <span class="smt">Shin Megami Tensei</span> X
+          <span class="fe">Fire Emblem</span>
+        </h1>
+        <img class="icon-2" src="img/fireEmblemIconRed.png" alt="" />
+      </div>
+      <div class="base-container">
+        <div class="dark-overlay">
+          <div class="menu-content ">
+            <div class="side-area">
+              <div class="current-team">
+                <h2>Team</h2>
+
+                <img
+                  src="img/atlus.png"
+                  class="character-image-lg p-icon-1"
+                  alt="Blank Icon"
+                />
+                <img
+                  src="img/atlus.png"
+                  class="character-image-lg p-icon-2"
+                  alt="Blank Icon"
+                />
+                <img
+                  src="img/atlus.png"
+                  class="character-image-lg p-icon-3"
+                  alt="Blank Icon"
+                />
+                <div class="button-zone">
+                  <button class="btn-sm btn-reset">
+                    Reset Team
+                  </button>
+                  <button class="btn-sm btn-random">
+                    Randomize Team
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="main-content">
+              <div class="options">
+                <div class="options-spacing"></div>
+                <div class="options-right">
+                  <h2>Play Now!</h2>
+                  <h3>Use Selected Team</h3>
+                  <button class="btn-full btn-battle-any">
+                    Play against any team.
+                  </button>
+                  <p class=" sm1 invisible" id="sm1">
+                    You must select a full team!
+                  </p>
+                  <button class="btn-full btn-battle-fe">
+                    Play against a Fire Emblem team.
+                  </button>
+                  <p class=" sm2 invisible" id="sm2">
+                    You must select a full team!
+                  </p>
+                  <button class="btn-full btn-battle-mt">
+                    Play against a Megami Tensei team.
+                  </button>
+                  <p class="invisible" id="sm3">
+                    You must select a full team!
+                  </p>
+                  <h3>Use a Random Team</h3>
+                  <button class="btn-full btn-battle-r-any">
+                    Play against any team.
+                  </button>
+                  <small class="invisible">
+                    spacing item
+                  </small>
+                  <button class="btn-full btn-battle-r-fe">
+                    Play against a Fire Emblem team.
+                  </button>
+                  <small class="invisible">
+                    spacing item
+                  </small>
+                  <button class="btn-full btn-battle-r-mt">
+                    Play against a Megami Tensei Team.
+                  </button>
+                  <small class="invisible">
+                    spacing item
+                  </small>
+                </div>
+                <div class="options-spacing"></div>
+              </div>
+              <div class="character-picker">
+                <img
+                  src="/img/units/marth.jpg"
+                  alt=""
+                  class="character-image-sm marth"
+                />
+                <img
+                  src="/img/units/demifiend.png"
+                  alt=""
+                  class="character-image-sm demifiend"
+                />
+                <img
+                  src="/img/units/ike.jpg"
+                  alt=""
+                  class="character-image-sm ike"
+                />
+                <img
+                  src="/img/units/flynn.png"
+                  alt=""
+                  class="character-image-sm flynn"
+                />
+                <img
+                  src="/img/units/robin.png"
+                  alt=""
+                  class="character-image-sm robin"
+                />
+                <img
+                  src="/img/units/joker.png"
+                  alt=""
+                  class="character-image-sm joker"
+                />
+                <img
+                  src="/img/units/corrin.png"
+                  alt=""
+                  class="character-image-sm corrin"
+                />
+                <img
+                  src="/img/units/kazuya.png"
+                  alt=""
+                  class="character-image-sm kazuya"
+                />
+                <img
+                  src="/img/units/edelgard.jpg"
+                  alt=""
+                  class="character-image-sm edelgard"
+                />
+                <img
+                  src="/img/units/itsuki.png"
+                  alt=""
+                  class="character-image-sm itsuki"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="game-content">
+            <div class="col" id="playersUnits">
+              <div class="playerUnitGroup">
+                <p id="pu-a-name"></p>
+                <img
+                  src="img/atlus.png"
+                  alt="Character Image"
+                  id="playerUnitA"
+                  class="battle-icon-player"
+                />
+                <div class="stat-group">
+                  <p>HP: 100/100</p>
+                  <p>Mana: 100/100</p>
+                </div>
+              </div>
+
+              <div class="playerUnitGroup">
+                <p id="pu-b-name"></p>
+                <img
+                  src="img/atlus.png"
+                  alt="Character Image"
+                  id="playerUnitB"
+                  class="battle-icon-player"
+                />
+                <div class="stat-group">
+                  <p>HP: 100/100</p>
+                  <p>Mana: 100/100</p>
+                </div>
+              </div>
+
+              <div class="playerUnitGroup">
+                <p id="pu-c-name"></p>
+                <img
+                  src="img/atlus.png"
+                  alt="Character Image"
+                  id="playerUnitC"
+                  class="battle-icon-player"
+                />
+                <div class="stat-group">
+                  <p>HP: 100/100</p>
+                  <p>Mana: 100/100</p>
+                </div>
+              </div>
+            </div>
+            <!-- Player Options go here -->
+            <div class="col" id="playerMoveZone">
+              <div class="move-row">
+                <div class="move-option">
+                  <p class="move-title">Sword Attack</p>
+                  <p class="move-description">
+                    Physical Attack. +3atk when using. Costs 0 mana. No special
+                    effects.
+                  </p>
+                </div>
+                <div class="move-option">
+                  <p class="move-title">Sword Attack</p>
+                  <p class="move-description">
+                    Physical Attack. +3atk when using. Costs 0 mana. No special
+                    effects.
+                  </p>
+                </div>
+                <div class="move-option">
+                  <p class="move-title">Sword Attack</p>
+                  <p class="move-description">
+                    Physical Attack. +3atk when using. Costs 0 mana. No special
+                    effects.
+                  </p>
+                </div>
+              </div>
+              <div class="move-row">
+                <div class="move-option">
+                  <p class="move-title">Sword Attack</p>
+                  <p class="move-description">
+                    Physical Attack. +3atk when using. Costs 0 mana. No special
+                    effects.
+                  </p>
+                </div>
+                <div class="move-option">
+                  <p class="move-title">Sword Attack</p>
+                  <p class="move-description">
+                    Physical Attack. +3atk when using. Costs 0 mana. No special
+                    effects.
+                  </p>
+                </div>
+                <div class="move-option">
+                  <p class="move-title">Sword Attack</p>
+                  <p class="move-description">
+                    Physical Attack. +3atk when using. Costs 0 mana. No special
+                    effects.
+                  </p>
+                </div>
+              </div>
+              <div class="move-row">
+                <div class="move-option">
+                  <p class="move-title">Sword Attack</p>
+                  <p class="move-description">
+                    Physical Attack. +3atk when using. Costs 0 mana. No special
+                    effects.
+                  </p>
+                </div>
+                <div class="move-option">
+                  <p class="move-title">Sword Attack</p>
+                  <p class="move-description">
+                    Physical Attack. +3atk when using. Costs 0 mana. No special
+                    effects.
+                  </p>
+                </div>
+                <div class="move-option">
+                  <p class="move-title">Sword Attack</p>
+                  <p class="move-description">
+                    Physical Attack. +3atk when using. Costs 0 mana. No special
+                    effects.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Text Descriptions of Combat go Here -->
+            <div class="col" id="textInformation">
+              <p class="textNote"></p>
+              <p class="textNote"></p>
+              <p class="textNote"></p>
+              <p class="textNote"></p>
+              <p class="textNote"></p>
+              <p class="textNote"></p>
+              <p class="textNote"></p>
+              <p class="textNote"></p>
+              <p class="textNote"></p>
+              <p class="textNote"></p>
+              <p class="textNote"></p>
+              <p class="textNote"></p>
+              <p class="textNote"></p>
+              <p class="textNote"></p>
+              <p class="textNote"></p>
+              <p class="textNote"></p>
+              <p class="textNote"></p>
+              <p class="textNote"></p>
+              <p class="textNote"></p>
+              <p class="textNote"></p>
+            </div>
+            <div class="col" id="enemysUnits">
+              <div class="enemyUnitGroup">
+                <p id="eu-a-name"></p>
+                <img
+                  src="img/atlus.png"
+                  alt="Character Image"
+                  id="enemyUnitA"
+                  class="battle-icon-enemy"
+                />
+                <div class="stat-group-e">
+                  <p>HP: 100/100</p>
+                  <p>Mana: 100/100</p>
+                </div>
+              </div>
+
+              <div class="enemyUnitGroup">
+                <p id="eu-b-name"></p>
+                <img
+                  src="img/atlus.png"
+                  alt="Character Image"
+                  id="enemyUnitB"
+                  class="battle-icon-enemy"
+                />
+                <div class="stat-group-e">
+                  <p>HP: 100/100</p>
+                  <p>Mana: 100/100</p>
+                </div>
+              </div>
+
+              <div class="enemyUnitGroup">
+                <p id="eu-c-name"></p>
+                <img
+                  src="img/atlus.png"
+                  alt="Character Image"
+                  id="enemyUnitC"
+                  class="battle-icon-enemy"
+                />
+                <div class="stat-group-e">
+                  <p>HP: 100/100</p>
+                  <p>Mana: 100/100</p>
+                </div>
+              </div>
+            </div>
+            <!-- Game Content Ends Here -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

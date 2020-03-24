@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css?family=Sen&display=swap');
+:root {
+  --primary-color: red;
+  --dark-color: black;
+  --background-color: lightgray;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  height: 100vh;
+  background-color: black;
+  font-family: Sen, sans-serif;
+}
+
+.full-container {
+  width: 100%;
+  flex-direction: column;
+}
+
+.title-bar {
+  width: 100%;
+  height: 10vh;
+  flex: 1;
+  background-color: var(--background-color);
+  color: black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: black 3px solid;
+}
+
+.base-container {
+  width: 100%;
+  height: 90vh;
+  flex: 4;
+  background-image: url(img/backgrounds/castleBackdrop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.icon-1 {
+  height: 100px;
+  width: 100px;
+}
+.icon-2 {
+  height: 120px;
+  width: 120px;
+}
+
+.smt {
+  color: red;
+}
+
+.fe {
+  color: blue;
+}
+
+.dark-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 90vh;
+}
+
+.removed {
+  display: none;
+}
+
+.player img {
+  height: 100px;
+  width: 100px;
+  cursor: pointer;
+  border: 2px black solid;
+}
+
+.menu-content {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.side-area {
+  flex: 1;
+  width: 100%;
+  height: 90vh;
+}
+
+.current-team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 90vh;
+  padding: 30px;
+}
+
+.current-team h2,
+img {
+  padding: 0px;
+  margin: 3px;
+}
+
+.main-content {
+  flex: 3;
+}
+
+.character-image-lg {
+  height: 200px;
+  width: 200px;
+  border: white 3px solid;
+}
+.character-image-sm {
+  height: 110px;
+  border: black 3px solid;
+}
+
+.current-team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3em;
+}
+
+.options {
+  flex: 5;
+  margin: 1em;
+  width: 100%;
+  display: flex;
+}
+
+.options-left {
+  background: rgba(255, 255, 255, 0.4);
+  border: 2px black solid;
+  width: 100%;
+  flex: 3;
+}
+.options-right {
+  background: rgba(255, 255, 255, 0.4);
+  border: 2px black solid;
+  width: 100%;
+  flex: 1;
+  margin-left: 2em;
+}
+
+.character-picker {
+  flex: 2;
+  background: rgba(255, 255, 255, 0.4);
+  width: 100%;
+  margin: 1em;
+  border: 2px black solid;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.options-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+  flex: 3;
+}
+
+.btn-full {
+  border-radius: 5px;
+  background: black;
+  color: red;
+  border: blue 2px solid;
+  width: 90%;
+  padding: 5px;
+  margin: 5px;
+}
+.btn-full:hover {
+  border-radius: 5px;
+  background: white;
+  color: red;
+  border: blue 2px solid;
+  width: 90%;
+  padding: 5px;
+  margin: 5px;
+}
+.btn-sm {
+  border-radius: 5px;
+  background: black;
+  color: red;
+  border: blue 2px solid;
+  width: 70%;
+  padding: 3px;
+  margin: 2px;
+}
+.btn-sm:hover {
+  border-radius: 5px;
+  background: white;
+  color: red;
+  border: blue 2px solid;
+  width: 70%;
+  padding: 3px;
+  margin: 2px;
+}
+
+.options-right h3 {
+  margin-top: 1em;
+}
+.options-right .btn-full {
+  margin-top: 1em;
+}
+.options-right h2 {
+  color: red;
+  text-emphasis: bold;
+}
+
+.options-spacing {
+  flex: 4;
+}
+
+.button-zone {
+  display: flex;
+}
+
+.game-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#playersUnits {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  text-align: center;
+  margin-left: 2em;
+  margin-right: 0;
+}
+#enemysUnits {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  text-align: center;
+  margin-right: 2em;
+  margin-left: 0;
+}
+
+.playerUnitGroup {
+  padding: 0.5em;
+  margin: 0px;
+}
+.enemyUnitGroup {
+  padding: 0.5em;
+  margin: 0px;
+}
+
+.battle-icon-player {
+  border: 3px blue solid;
+  height: 200px;
+  width: 200px;
+}
+.battle-icon-enemy {
+  border: 3px red solid;
+  height: 200px;
+  width: 200px;
+}
+
+.stat-group {
+  display: flex;
+}
+.stat-group-e {
+  display: flex;
+}
+
+.stat-group p {
+  border: 1px black solid;
+  background-color: lightblue;
+  color: black;
+  padding: 2px;
+  margin-right: 2px;
+}
+.stat-group-e p {
+  border: 1px black solid;
+  background-color: lightpink;
+  color: black;
+  padding: 2px;
+  margin-right: 2px;
+}
+
+#playerMoveZone {
+  width: 40em;
+  margin: 0px;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#textInformation {
+  border: black 3px solid;
+  background-color: rgba(255, 255, 255, 0.4);
+  width: 40em;
+  margin: 0px;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  padding: 3px;
+}
+
+/* .move-row {
+  display: flex;
+  flex-direction: column;
+} */
+
+.move-option {
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 1px blue solid;
+  width: 100%;
+  margin: 1.5em;
+  padding: 1px 5px;
+}
+
+.redText {
+  color: red;
+}
+.blueText {
+  color: blue;
+}
+.greenText {
+  color: green;
+}
+
+/* Keep at Bottom */
+
+.invisible {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.removed {
+  display: none;
+}
